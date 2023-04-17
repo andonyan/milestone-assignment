@@ -6,7 +6,7 @@ if ($taskExists) {
     Unregister-ScheduledTask -TaskName $taskName -Confirm:$false
 }
 
-$action = New-ScheduledTaskAction -Execute "C:\Python\Python.exe" -Argument "C:\Users\Redward\Desktop\python\Milestone\system_time.py"
+$action = New-ScheduledTaskAction -Execute "C:\Program Files\Python\Python.exe" -Argument ".\Python\system_time.py"
 
 $trigger = New-ScheduledTaskTrigger -Once -At (Get-Date).AddSeconds(3)
 
